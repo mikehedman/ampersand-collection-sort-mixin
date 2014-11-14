@@ -1,6 +1,3 @@
-/**
- * Created by mike on 11/13/14.
- */
 var extend = require('extend-object');
 
 module.exports = {

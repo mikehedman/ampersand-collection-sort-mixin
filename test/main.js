@@ -11,16 +11,6 @@ var Stooge = State.extend({
     }
 });
 
-//test('basics', function (t) {
-//    var c = new Collection();
-//    var obj = {hey: 'there'};
-//    t.ok(c);
-//    c.add(obj);
-//    t.equals(c.length, 1);
-//    t.equals(c.at(0), obj);
-//    t.end();
-//});
-
 test('single field in array, ascending', function (t) {
     var Coll = Collection.extend(mixin, {
         session: {
@@ -54,7 +44,6 @@ test('single field as string, ascending', function (t) {
     t.equal(c.at(2).firstname, 'moe');
     t.end();
 });
-
 
 test('single field in array, descending', function (t) {
     var Coll = Collection.extend(mixin, {
