@@ -28,6 +28,26 @@ module.exports = {
         }
         //if it got this far, they are equal
         return 0;
-    }
+    },
 
+    getSortProps: function() {
+        return this.session.sortProps;
+    },
+    /**
+     * sets the properties used to sort by
+     * @param {Array | string} sortProps An array of property names, or one property name in a string
+     */
+    setSortProps: function(sortProps) {
+        this.session.sortProps = sortProps;
+    },
+
+    getSortDescending: function() {
+        return this.session.sortDescending;
+    },
+    /**
+     * @param {boolean} sortDescending  True for a descending sort, false for ascending
+     */
+    setSortDescending: function(sortDescending) {
+        this.session.sortDescending = sortDescending;
+    }
 };

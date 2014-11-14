@@ -137,11 +137,34 @@ test('sort function with single field in array, ascending', function (t) {
     t.equal(c.at(1).firstname, 'larry');
     t.equal(c.at(2).firstname, 'moe');
     //change sort field
-    c.session.sortProps = ['id'];
+    c.setSortProps(['id']);
     t.equal(c.at(0).firstname, 'curly', 'confirm it did not re-sort yet');
     c.sort();
     t.equal(c.at(0).firstname, 'moe');
     t.equal(c.at(1).firstname, 'curly');
     t.equal(c.at(2).firstname, 'larry');
+    t.end();
+});
+
+test('change direction', function (t) {
+    var Coll = Collection.extend(mixin, {
+        session: {
+            sortProps: ['firstname']
+        }
+    });
+    var c = new Coll();
+    var moe = new Stooge({firstname: 'moe', id: '1'});
+    var larry = new Stooge({firstname: 'larry', id: '3'});
+    var curly = new Stooge({firstname: 'curly', id: '2'});
+    c.add([moe, curly, larry]);
+    t.equal(c.at(0).firstname, 'curly');
+    t.equal(c.at(1).firstname, 'larry');
+    t.equal(c.at(2).firstname, 'moe');
+    //change sort field
+    c.setSortDescending(true);
+    c.sort();
+    t.equal(c.at(0).firstname, 'moe');
+    t.equal(c.at(1).firstname, 'larry');
+    t.equal(c.at(2).firstname, 'curly');
     t.end();
 });
