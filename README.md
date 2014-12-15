@@ -4,7 +4,6 @@ A mixin for extending [ampersand-collection](https://github.com/AmpersandJS/ampe
 
 ## install
 
-Sometime soon:
 ```
 npm install ampersand-collection-sort-mixin
 ```
