@@ -1,4 +1,5 @@
-# ampersand-collection-rest-mixin
+# ampersand-collection-rest-mixin   ![Build Status](https://api.travis-ci.org/mikehedman/ampersand-collection-sort-mixin.svg?branch=master)
+
 
 A mixin for extending [ampersand-collection](https://github.com/AmpersandJS/ampersand-collection) with the ability to sort by multiple properties, and ascending/descending.  The sorting is performed when adding new models to the collection, or when the sort() method is called.
 
