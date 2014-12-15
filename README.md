@@ -14,7 +14,7 @@ The mixin uses two properties stored in session properties:
 * sortDescending - Boolean.  Set to true to sort descending. Default is false (ascending)
 ## example
 
-```javascript
+```
 var Collection = require('ampersand-collection');
 var sortMixin = require('ampersand-collection-sort-mixin');
 
