@@ -1,6 +1,7 @@
 {
   "name": "ampersand-collection-sort-mixin",
-  "version": "0.0.1",
+  "description": "A mixin to provide simple ascending/descending sorting"
+  "version": "0.0.2",
   "author": {
     "name": "Mike Hedman",
     "email": "mikehedman@gmail.com"
@@ -15,8 +16,21 @@
     "tap-spec": "^0.2.1",
     "tape": "2.x.x"
   },
+  "homepage": "https://github.com/mikehedman/ampersand-collection-sort-mixin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikehedman/ampersand-collection-sort-mixin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikehedman/ampersand-collection-sort-mixin/issues"
+  },
+  "keywords": [
+    "collections",
+    "ampersand",
+    "browser"
+  ],
   "scripts": {
     "test": "node test/main.js | tap-spec"
   },
-  "description": "A mixin to provide simple ascending/descending sorting"
+  "license": "MIT"
 }
